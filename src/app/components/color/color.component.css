@@ -1,0 +1,48 @@
+
+.colors-submenu>ul{list-style: none; padding:0;}
+.colors-submenu>ul>li{
+	display: block;	
+	position: relative;
+	cursor:pointer;
+}
+.colors-submenu>ul>li>span{
+	color: rgb(36 39 43);
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 19px;
+	font-family: Open Sans;
+	font-weight: bold;
+	display: block;
+	padding: 5px 0 5px 0;
+	margin: 5px 0 5px 23px;
+	position: relative;
+	z-index: 999;
+}
+
+.colors-submenu>ul>li::before{
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: rgb(36 39 43);
+    right: 0;
+    left: -10px;
+}
+.colors-submenu>ul>.active-in>span{
+	color:#fff;
+}
+.colors-submenu>ul>li:hover::before{
+	-webkit-animation: active-in 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: active-in 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.colors-submenu>ul>.active-in::before{
+	-webkit-animation: active-in 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: active-in 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.colors-submenu>ul>.active-out::before{
+	-webkit-animation: active-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: active-out 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.colors-submenu>ul>li:hover span{
+	color:#fff;
+}

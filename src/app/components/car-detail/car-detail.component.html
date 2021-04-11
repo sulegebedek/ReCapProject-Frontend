@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="car-details-section">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        
+    
+        <div class="carousel-inner">
+    
+          <div [class]=getCurrentCarouselClass(img.id) *ngFor="let img of carImg">
+            <img [src]=ApiUr.concat(img.imagePath) [attr.imgId]="img.id" class="d-block w-100" alt="...">
+          </div>
+    
+        
+        </div>
+    
+        <button (click)="prevBtn()" class="carousel-control-prev" type="button" >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="control-prev-icon-hover"></span>
+        </button>
+        <button (click)="nextBtn()" class="carousel-control-next" type="button" >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="control-next-icon-hover"></span>
+        </button>
+    
+      </div>
+      <div class="carousel-indicators">
+    
+        <div [class]=getCurrentCarouselmenuClass(img.id) *ngFor="let img of carImg">
+              <img (click)="setCurrentImg(img.id)" [src]=ApiUr.concat(img.imagePath) [attr.imgId]="img.id" class="d-block carousel-menu-img" alt="...">
+        </div>
+    
+       
+      </div>
+    
+    
+    </div>
+    </div>

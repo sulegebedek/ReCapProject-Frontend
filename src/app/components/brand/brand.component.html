@@ -1,0 +1,9 @@
+<li class="leftmenu-list"><a href="javascript:void(0)">Markalar <i class="fas fa-minus"></i></a>
+    <div class="brands-submenu">
+                            <ul>
+                                <li (click)="setCurrentBrand(brand)" [class]=getCurrentBrandClass(brand)
+                                *ngFor="let brand of brands" routerLink="/cars/brand/{{brand.brandId}}" 
+                                ><span>{{brand.brandName}}</span></li>
+                            </ul>
+    </div>
+</li>

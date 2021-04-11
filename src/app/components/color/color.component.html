@@ -1,0 +1,9 @@
+<li class="leftmenu-list"><a href="javascript:void(0)">Renkler <i class="fas fa-minus"></i></a>
+    <div class="colors-submenu">
+                            <ul>
+                                <li (click)="setCurrentColor(color)" [class]=getCurrentColorClass(color)
+                                *ngFor="let color of colors" routerLink="/cars/color/{{color.colorId}}" 
+                                ><span>{{color.colorName}}</span></li>
+                            </ul>
+    </div>
+</li>

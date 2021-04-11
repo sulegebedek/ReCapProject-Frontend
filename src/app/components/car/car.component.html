@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="row clearfix">
+		<div id="cars-left-menu" class="col-xs-12 col-sm-12 col-md-3">
+			<ul>
+				<app-brand></app-brand>
+				<app-color></app-color>
+			</ul>
+		</div>
+
+
+<div class="col-xs-12 col-sm-12 col-md-9">
+  <div id="car-tab" class="row clearfix">
+        <div *ngIf="dataLoaded==false"  class="d-flex justify-content-center">
+          <div class="spinner-border text-dark" role="status">
+            <span class="visually-hidden"></span>
+          </div>
+        </div>
+  <div class="car-box col-xs-12 col-sm-6 col-md-4" *ngFor="let car of cars">
+      <div class="car-details" >
+          <h4 class="car-name txt">{{ car.carName }}</h4>
+          <p class="car-desc txt">{{ car.description }}</p>
+          <img class="car-img" [src]=ApiUr.concat(car.images[0].imagePath) />
+          <p class="car-detail-title">MARKA</p>
+          <p class="car-detail-title">RENK</p>
+          <span class="car-brand car-detail">{{ car.brandName }}</span>
+          <span class="car-color car-detail">{{ car.colorName }}</span>
+          <span class="car-price-txt">Başlangıç Fiyatı</span>
+          <span class="car-price txt">{{ car.dailyPrice }} TL</span>
+
+          <a class="car-btn" routerLink="/car/{{car.carId}}" >MODELİ DETAYLI İNCELE</a>
+        </div>
+  </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
